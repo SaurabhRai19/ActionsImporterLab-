@@ -1,0 +1,10 @@
+name: templates_include_npm_steps
+runs:
+  using: composite
+  steps:
+  - run: npm install
+    shell: bash
+  - run: npm update
+    shell: bash
+  - run: npm ls
+    shell: bash
