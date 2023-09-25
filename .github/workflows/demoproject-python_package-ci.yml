@@ -1,0 +1,16 @@
+name: DemoProject/DemoProject-Python_package-CI
+on:
+  workflow_dispatch:
+env:
+  python_version: '3.7'
+  system_debug: 'false'
+jobs:
+  Phase_1:
+    name: Build and Test
+    runs-on:
+      - self-hosted
+      - ubuntu latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4.0.0
+    - uses: "./.github/actions/define_python_version_and_install_dependencies"
