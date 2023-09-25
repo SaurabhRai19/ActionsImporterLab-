@@ -1,0 +1,12 @@
+name: DemoProject/AngularApp_(1)
+on:
+  push:
+    branches:
+    - main
+jobs:
+  CIJob:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4.0.0
+    - uses: "./.github/actions/templates_include_npm_steps"
